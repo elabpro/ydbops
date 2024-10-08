@@ -14,15 +14,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-
-    - name: Set up Go
-      uses: actions/setup-go@v4
-      with:
-        go-version: '1.22'
+    - name: Checkout code
+      uses: actions/checkout@master
 
     - name: Build
-      run: go build -o bin/ydbops main.go
-
-    - name: Test
-      run: go test -v ./...
+      run: |
+        make build-in-docker
