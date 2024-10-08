@@ -23,12 +23,12 @@ jobs:
     - name: Generate Changelog
       run: |
         VERSION=$(cicd/version.sh)
-        cicd/changelog.sh $VERSION > bin/$-CHANGELOG.md
+        cicd/changelog.sh $VERSION > bin/CHANGELOG.md
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v1
       with:
-        body_path: bin/$-CHANGELOG.md
+        body_path: bin/CHANGELOG.md
         files: bin/ydbops*
       env:
         GITHUB_TOKEN: ${{ github.token }}
