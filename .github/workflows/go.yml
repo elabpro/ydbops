@@ -31,4 +31,4 @@ jobs:
         body_path: bin/$-CHANGELOG.md
         files: bin/ydbops*
       env:
-        GITHUB_TOKEN: $
+        GITHUB_TOKEN: ${{ github.token }}

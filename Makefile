@@ -26,7 +26,7 @@ docker:
 build-in-docker: docker
 	docker rm -f $(BINARY_NAME) || true
 	docker create --name $(BINARY_NAME) $(BINARY_NAME)
-	docker cp '$(BINARY_NAME):/app/' $(BUILD_DIR)
+	docker cp '$(BINARY_NAME):/app/bin/' $(BUILD_DIR)
 	docker rm -f $(BINARY_NAME)
 
 clean:
