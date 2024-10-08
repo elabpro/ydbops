@@ -24,7 +24,7 @@ jobs:
     - name: Generate Changelog
       run: |
         VERSION=$(cicd/version.sh)
-        cicd/changelog.sh $VERSION > bin/$-CHANGELOG.md
+        shell cicd/changelog.sh $VERSION > bin/$-CHANGELOG.md
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v1
