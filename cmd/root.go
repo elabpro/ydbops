@@ -17,10 +17,12 @@ import (
 	"github.com/ydb-platform/ydbops/pkg/options"
 )
 
+var buildVersion = "v0.0.0"
+
 var RootCommandDescription = command.NewDescription(
 	"ydbops",
 	"ydbops: a CLI tool for performing YDB cluster maintenance operations",
-	"ydbops: a CLI tool for performing YDB cluster maintenance operations",
+	"ydbops: a CLI tool for performing YDB cluster maintenance operations" ,
 )
 
 type RootOptions struct {
@@ -46,7 +48,7 @@ func NewRootCommand(
 	cmd := &cobra.Command{
 		Use:   RootCommandDescription.GetUse(),
 		Short: RootCommandDescription.GetShortDescription(),
-		Long:  RootCommandDescription.GetLongDescription(),
+		Long:  RootCommandDescription.GetLongDescription() + " (" + buildVersion + ")",
 		// hide --completion for more compact --help
 		CompletionOptions: cobra.CompletionOptions{
 			DisableDefaultCmd: true,
