@@ -1,6 +1,8 @@
 # Changelog
 
 
+## v0.0.14 - 2024-11-01
+
 ## v0.0.13 - 2024-11-01
 ### Changed
 * Small changes in Makefile and testing usage of changie
