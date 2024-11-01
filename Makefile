@@ -25,7 +25,7 @@ build-macos: lint pre-build
 
 build: lint pre-build
 	CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -ldflags=${LDFLAGS} -o ${BUILD_DIR}/${BINARY_NAME} main.go
-	strip bin/${BINARY_NAME}
+	strip ${BUILD_DIR}/${BINARY_NAME}
 
 clear:
 	rm -rf bin/${BINARY_NAME}
