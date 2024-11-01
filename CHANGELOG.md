@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v0.0.13 - 2024-11-01
+### Changed
+* Small changes in Makefile and testing usage of changie
+
 ## v0.0.12 - 2024-10-31
 ### Changed
 * migrated to changie for keeping a changelog
